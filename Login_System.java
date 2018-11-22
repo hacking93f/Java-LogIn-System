@@ -3,8 +3,8 @@
  * Simple log in system coded by Neo0Hacker 
  * all rights reserved
  * 
- * prendere spunto da questo login system, per poi poterlo implementare nei veri progetti! 
- * comunque credo che la teoria di base per un sistema di login sia questa
+ 
+ remember to import the sql driver package in your Java-Project
  */
 
 
@@ -29,22 +29,22 @@ public class Login_System {
 			
 			
 			String url = "jdbc:postgresql://localhost:5432/usr_lgn";
-			String usrname= "db";
-			String pswrd="falsarone";
+			String usrname= "usrname db";//username d'accesso db
+			String pswrd="pwd db";//password d'accesso al db
 			connection = DriverManager.getConnection(url,usrname,pswrd);
 			
 			Statement s = connection.createStatement();
 
 			Statement ps = connection.createStatement();
 			
-			String getnmsql = "select username from usr_lgn";
-			String getpwsql = "select passwo from usr_lgn";
+			String getnmsql = "select COLONNA from DATABASE";
+			String getpwsql = "select COLONNA from DATABASE";
 			ResultSet rs =s.executeQuery(getnmsql);
 		    ResultSet pwr= ps.executeQuery(getpwsql);
 		    
 		    while(rs.next() & pwr.next()) {
-		    	String nome = rs.getString("username");
-		    	String pws = pwr.getString("passwo");
+		    	String nome = rs.getString("COLONNA");
+		    	String pws = pwr.getString("COLONNA");
 		    	
 		    	if(nome.contentEquals(username) & pws.contentEquals(password)) {
 		    		System.out.println("logged");

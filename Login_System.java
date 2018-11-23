@@ -49,9 +49,9 @@ public class Login_System {
 		    	if(nome.contentEquals(username) & pws.contentEquals(password)) {
 		    		System.out.println("logged");
 		    		break;
-		    	}else;
-		    	System.out.println("no username and password found ");
-		    }
+		    	}
+		    	
+		    }System.out.println("incorrect username or password ");
 
 
 }

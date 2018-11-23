@@ -27,8 +27,8 @@ public class Login_System {
 		
 			Class.forName("org.postgresql.Driver");
 			
-			
-			String url = "jdbc:postgresql://localhost:5432/usr_lgn";
+			//se usate postgresql
+			String url = "jdbc:postgresql://localhost:QUI LA PORTA DI POSTGRE/quiilnomedelDB";
 			String usrname= "usrname db";//username d'accesso db
 			String pswrd="pwd db";//password d'accesso al db
 			connection = DriverManager.getConnection(url,usrname,pswrd);

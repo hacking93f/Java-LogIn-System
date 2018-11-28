@@ -28,6 +28,8 @@ public class GetDataFromDB {
 			
 			Statement ss =connection.createStatement();
 
+		        //le colonne del database da scorrere
+		
 			String inv = "SELECT username FROM public.dati";
 			String inv2 = "SELECT dato FROM public.dati";
 			
@@ -40,6 +42,9 @@ public class GetDataFromDB {
 				String nm = rs.getString("username");
 
 					if(nm.contentEquals(username)){
+						
+						//qui si recuperano i dati e si settano sulla classe dell utente! 
+						
 						System.out.print(v);
 					}
 			

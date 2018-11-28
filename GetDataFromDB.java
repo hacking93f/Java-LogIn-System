@@ -6,7 +6,7 @@ import java.sql.*;
 
 public class GetDataFromDB {
 	
-	static String username = "ciao2";
+	static String username = "hacking93f";
 	
 	
 
@@ -35,15 +35,14 @@ public class GetDataFromDB {
 			ResultSet rss = ss.executeQuery(inv2);
 			
 			while(rs.next() & rss.next() ) {
+				
+				int v = rss.getInt("dato");
 				String nm = rs.getString("username");
-				String v = rss.getString("dato");
-				
-				Integer w = Integer.parseInt(v);
-				
-				
-				if(username.contentEquals(nm)) {
-					System.out.print(v);
-				}break;
+
+					if(nm.contentEquals(username)){
+						System.out.print(v);
+					}
+			
 			}
 			
 		
